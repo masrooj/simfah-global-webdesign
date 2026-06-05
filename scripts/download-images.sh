@@ -88,7 +88,8 @@ dl scroll-cafe.jpg 324028
 dl scroll-barber.jpg 2801985
 dl scroll-law.jpg 8112165
 dl scroll-bakery.jpg 1775043
-dl scroll-carwash.jpg 2877781
+dl scroll-carwash.jpg 6873130
+dl scroll-auto.jpg 3846390
 dl scroll-events.jpg 2747449
 dl scroll-pet.jpg 4587997
 dl scroll-agency.jpg 3182812

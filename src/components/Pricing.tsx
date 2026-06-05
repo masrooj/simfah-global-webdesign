@@ -64,7 +64,7 @@ export function Pricing() {
               </a>
               {plan.secondaryLink && (
                 <a
-                  href={siteConfig.brand.enterpriseUrl}
+                  href={plan.secondaryLink.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{

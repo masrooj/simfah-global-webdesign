@@ -122,7 +122,7 @@ export function Footer() {
           rel="noopener noreferrer"
           style={{ color: "var(--subtle)" }}
         >
-          simfahglobal.com
+          enterprise.simfahglobal.com
         </a>
       </div>
     </footer>

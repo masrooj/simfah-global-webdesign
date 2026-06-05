@@ -92,3 +92,32 @@ export function getSmtpConfig() {
 export function isSmtpConfigured(): boolean {
   return getSmtpConfig() !== null;
 }
+
+const SMTP_REQUIRED_KEYS = [
+  "SMTP_HOST",
+  "SMTP_PORT",
+  "SMTP_USER",
+  "SMTP_PASS",
+  "SMTP_FROM",
+] as const;
+
+/** Names of SMTP env vars that are missing or empty (for /api/contact health checks). */
+export function getMissingSmtpEnvKeys(): string[] {
+  return SMTP_REQUIRED_KEYS.filter((key) => !env(key));
+}
+
+export function getSmtpSetupHint(): string {
+  if (isVercel) {
+    return (
+      "Email is not configured on Vercel. In your project go to Settings → Environment Variables " +
+      "and add SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM (plus SMTP_SECURE=true and " +
+      "SMTP_ENCRYPTION=SSL). Apply to Production, then Redeploy. " +
+      "Use the plain SMTP password (no backslash before $)."
+    );
+  }
+
+  return (
+    "Email is not configured. Add SMTP_* variables to .env.local (see .env.example), " +
+    "then restart npm run dev. If SMTP_PASS starts with $, use SMTP_PASS=\\$YourPassword in .env.local."
+  );
+}

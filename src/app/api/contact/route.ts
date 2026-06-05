@@ -1,6 +1,11 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
-import { getSmtpConfig, isSmtpConfigured } from "@/lib/smtp.server";
+import {
+  getMissingSmtpEnvKeys,
+  getSmtpConfig,
+  getSmtpSetupHint,
+  isSmtpConfigured,
+} from "@/lib/smtp.server";
 
 export const maxDuration = 60;
 
@@ -29,8 +34,8 @@ export async function POST(request: Request) {
   if (!isSmtpConfigured() || !smtp) {
     return NextResponse.json(
       {
-        error:
-          "Email is not configured. Add SMTP_* variables to .env.local (see .env.example).",
+        error: getSmtpSetupHint(),
+        missing: getMissingSmtpEnvKeys(),
       },
       { status: 503 },
     );

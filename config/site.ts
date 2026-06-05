@@ -80,8 +80,8 @@ export const siteConfig = {
     tagline: "Ignite. Innovate. Dominate.",
     logoUrl: "/simfah-logo.png",
     /** Main enterprise product (AI, apps, ERP) — separate from this web-design landing */
-    enterpriseUrl: "https://simfahglobal.com",
-    websiteUrl: "https://simfahglobal.com",
+    enterpriseUrl: "https://enterprise.simfahglobal.com",
+    websiteUrl: "https://enterprise.simfahglobal.com",
     about:
       "Fast, beautiful websites for local businesses — restaurants, salons, clinics, gyms, and more. Built in days, not months.",
     copyrightYear: 2026,
@@ -344,7 +344,7 @@ export const siteConfig = {
         ctaLabel: "Request a quote",
         whatsappMessage:
           "Hi Simfah Global, I need a custom enterprise quote for web, mobile, AI or management systems",
-        secondaryLink: { label: "View all enterprise services →", href: "https://simfahglobal.com" },
+        secondaryLink: { label: "View all enterprise services →", href: "https://enterprise.simfahglobal.com/" },
       },
     ] as PricingPlan[],
     formPlanOptions: [
@@ -417,7 +417,8 @@ export const siteConfig = {
       { label: "Barber", image: "/images/scroll-barber.jpg", imageAlt: "Barber shop" },
       { label: "Law Firm", image: "/images/scroll-law.jpg", imageAlt: "Law firm office" },
       { label: "Bakery", image: "/images/scroll-bakery.jpg", imageAlt: "Bakery pastries" },
-      { label: "Car Wash", image: "/images/scroll-carwash.jpg", imageAlt: "Car wash" },
+      { label: "Auto & Detailing", image: "/images/scroll-auto.jpg", imageAlt: "Mechanic working in an auto repair workshop" },
+      { label: "Car Wash", image: "/images/scroll-carwash.jpg", imageAlt: "Car being rinsed with a power sprayer at a wash bay" },
       { label: "Events", image: "/images/scroll-events.jpg", imageAlt: "Events venue" },
       { label: "Pet Grooming", image: "/images/scroll-pet.jpg", imageAlt: "Pet grooming" },
       { label: "Creative Agency", image: "/images/scroll-agency.jpg", imageAlt: "Creative agency team" },
@@ -500,7 +501,11 @@ export const siteConfig = {
       { label: "Enterprise · custom builds", href: "#pricing" },
       { label: "Mobile-first & SEO setup", href: "#features" },
       { label: "Free mockup in 48 hours", href: "#process" },
-      { label: "AI, apps & enterprise →", href: "https://simfahglobal.com", external: true },
+      {
+        label: "AI, apps & enterprise →",
+        href: "https://enterprise.simfahglobal.com",
+        external: true,
+      },
     ],
     links: [
       { label: "Our work", href: "#work" },
@@ -509,7 +514,11 @@ export const siteConfig = {
       { label: "Plans", href: "#pricing" },
       { label: "Industries", href: "#industries" },
       { label: "Get started", href: "#contact" },
-      { label: "simfahglobal.com", href: "https://simfahglobal.com", external: true },
+      {
+        label: "enterprise.simfahglobal.com",
+        href: "https://enterprise.simfahglobal.com",
+        external: true,
+      },
     ],
   },
 } as const;

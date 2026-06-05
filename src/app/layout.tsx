@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@config/site";
 import { getSiteUrl } from "@/lib/env";
 import "./globals.css";
@@ -86,6 +87,7 @@ export default function RootLayout({
           `}</style>
         </noscript>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -64,12 +64,7 @@ export function ContactForm() {
         const errBody = await res.json();
         if (errBody?.error) {
           errText = errBody.error;
-          if (res.status === 503) {
-            errText +=
-              " Restart `npm run dev` after saving `.env.local` (SMTP_PASS=\\$… if the password starts with $).";
-          } else if (errBody.details) {
-            errText += ` (${errBody.details})`;
-          }
+          if (errBody.details) errText += ` (${errBody.details})`;
         }
       } catch {
         /* ignore */
