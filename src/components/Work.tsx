@@ -1,4 +1,4 @@
-import { siteConfig, whatsAppUrl } from "@/lib/site";
+import { projectDisplayUrl, projectLiveUrl, siteConfig } from "@/lib/site";
 
 export function Work() {
   const { work } = siteConfig;
@@ -14,7 +14,7 @@ export function Work() {
           {work.projects.map((project) => (
             <a
               key={project.url}
-              href={whatsAppUrl(project.whatsappMessage)}
+              href={projectLiveUrl(project.url)}
               className={`demo-card fade-in${project.featured ? " featured" : ""}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -23,13 +23,13 @@ export function Work() {
                 <span className="dot r" />
                 <span className="dot y" />
                 <span className="dot g" />
-                <span className="browser-url">{project.url}</span>
+                <span className="browser-url">{projectDisplayUrl(project.url)}</span>
               </div>
               <div className="demo-img-wrap">
                 <img src={project.image} alt={project.imageAlt} />
                 <div className="demo-overlay">
                   <span>
-                    Request demo <i className="ti ti-arrow-right" />
+                    View live site <i className="ti ti-arrow-right" />
                   </span>
                 </div>
               </div>

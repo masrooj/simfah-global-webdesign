@@ -182,13 +182,13 @@ export const siteConfig = {
     subheading: "Real designs for real businesses — crafted to convert visitors into customers.",
     projects: [
       {
-        name: "Zara Kitchen",
+        name: "A & N's Halal Kitchen",
         location: "Dubai",
         tag: "Restaurant",
-        url: "zarakitchen.ae",
+        url: "https://demo-restaurent.simfahglobal.com",
         image: "/images/work-zara.jpg",
-        imageAlt: "Zara Kitchen restaurant website",
-        whatsappMessage: "Hi Simfah Global, I want to see the Zara Kitchen demo",
+        imageAlt: "A & N's Halal Kitchen restaurant website",
+        whatsappMessage: "Hi Simfah Global, I want to see the A & N's Halal Kitchen demo",
         featured: true,
       },
       {
